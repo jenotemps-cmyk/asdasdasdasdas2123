@@ -4,10 +4,10 @@ getgenv().wizprivate = {
         ["Key"] = "keyhere" -- Luarmor Key's.
     },
     ["Binds"] = { -- Keybinds for certain things
-        ['Select'] = "Q", -- Select // Target Keybind
+        ['Select'] = "C", -- Select // Target Keybind
         ['Camera Aimbot'] = "C", -- Camera Aimbot Toggle
         ['Triggerbot'] = "C", -- Triggerbot Activation Bind
-        ['Speed'] = "z" -- Speed Modifications Toggle
+        ['Speed'] = "X" -- Speed Modifications Toggle
     },
     ['Select Only Features'] = {
         ['Force Hit'] = true, -- While a person is selected it will always hit their head.
@@ -25,7 +25,7 @@ getgenv().wizprivate = {
     },
     ['Silent Aimbot'] = {
         ['Enabled'] = true, -- Silent Aimbot toggle
-        ['HitPart'] = "Closest Point", 
+        ['HitPart'] = "Closest Part", 
         ['Closest Point'] = {
             ['Mode'] = 'Basic', -- Basic // Advanced
             ['Scale'] = 5.5, -- determines how spread out ur points are 0 = super spaced out, 1 = super centered onto the torso
@@ -38,15 +38,15 @@ getgenv().wizprivate = {
         },
         ['FOV'] = {
             ['Show FOV'] = false, -- Visualize FOV, use this only if you're testing FOV's. Visualization = Red
-            ["X Left"] = 14,
-            ["X Right"] = 14,
+            ["X Left"] = 12,
+            ["X Right"] = 12,
             ["Y Upper"] = 12,
-            ["Y Lower"] = 14,
-            ["Z Left"] = 14,
+            ["Y Lower"] = 12,
+            ["Z Left"] = 12,
             ["Z Right"] = 12
         },
         ['Weapon Configuration'] = { -- Configured via Weapons
-            ['Enabled'] = true,
+            ['Enabled'] = false,
             ['Shotguns'] = {
                 ["X Left"] = 1.011, ["X Right"] = 1.62,
                 ["Y Upper"] = 2.025, ["Y Lower"] = 3.225,
@@ -75,7 +75,7 @@ getgenv().wizprivate = {
         }
     },
     ['Anti Curve'] = { -- Checks Angles via gun barrels to see if silent aim should activate
-        ['Enabled'] = false,
+        ['Enabled'] = true,
         ['Angle'] = 0.5,
         ['Weapon Configuration'] = { -- Configurable Angles via different weapons.
             ['Enabled'] = true,
@@ -216,12 +216,12 @@ getgenv().wizprivate = {
         ['Double-Barrel SG'] = {
             ['Fixed'] = 0,
             ['Min'] = 0.2,
-            ['Max'] = 0.6
+            ['Max'] = 0.4
         },
         ['TacticalShotgun'] = {
             ['Fixed'] = 0,
             ['Min'] = 0.2,
-            ['Max'] = 0.5
+            ['Max'] = 0.3
         },
         ['Shotgun'] = {
             ['Fixed'] = 0.9,
@@ -235,13 +235,13 @@ getgenv().wizprivate = {
         },
     },
     ['Speed Modifications'] = { -- Modifies your speed, works universally.
-        ['Enabled'] = false, -- determines if speed should work ( toggle wont work if its on false either )
+        ['Enabled'] = true, -- determines if speed should work ( toggle wont work if its on false either )
         ['Normal'] = { -- normal player conditions
-            ['Multiplier'] = 10
+            ['Multiplier'] = 15
         },
         ['Low Health'] = { -- checks if player is under 35 health and if so it just makes it ur speed choice
             ['Health Threshold'] = 35,
-            ['Multiplier'] = 12
+            ['Multiplier'] = 15
         }
     }
 }
