@@ -24,7 +24,7 @@ shared.Glory = {
 
     ['silent aimbot'] = {
         ['enabled'] = true,
-        ['mode'] = 'Always',
+        ['mode'] = 'Toggle',
         ['hitpart'] = 'Closest Part',
         ['use prediction'] = false,
         ['prediction'] = {
