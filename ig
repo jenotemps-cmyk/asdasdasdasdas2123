@@ -4,14 +4,14 @@ getgenv().wizprivate = {
         ["Key"] = "keyhere" -- Luarmor Key's.
     },
     ["Binds"] = { -- Keybinds for certain things
-        ['Select'] = "C", -- Select // Target Keybind
+        ['Select'] = "Q", -- Select // Target Keybind
         ['Camera Aimbot'] = "C", -- Camera Aimbot Toggle
         ['Triggerbot'] = "C", -- Triggerbot Activation Bind
         ['Speed'] = "z" -- Speed Modifications Toggle
     },
     ['Select Only Features'] = {
         ['Force Hit'] = true, -- While a person is selected it will always hit their head.
-        ['Force Trigger'] = true -- While a person is selected it will trigger everywhere (Best used with Force Hit)
+        ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
         ['Target Mode'] = 'Select' -- Automatic // Select
@@ -38,11 +38,11 @@ getgenv().wizprivate = {
         },
         ['FOV'] = {
             ['Show FOV'] = false, -- Visualize FOV, use this only if you're testing FOV's. Visualization = Red
-            ["X Left"] = 12,
-            ["X Right"] = 12,
+            ["X Left"] = 14,
+            ["X Right"] = 14,
             ["Y Upper"] = 12,
-            ["Y Lower"] = 12,
-            ["Z Left"] = 12,
+            ["Y Lower"] = 14,
+            ["Z Left"] = 14,
             ["Z Right"] = 12
         },
         ['Weapon Configuration'] = { -- Configured via Weapons
