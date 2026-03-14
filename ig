@@ -10,11 +10,11 @@ getgenv().wizprivate = {
         ['Speed'] = "z" -- Speed Modifications Toggle
     },
     ['Select Only Features'] = {
-        ['Force Hit'] = true, -- While a person is selected it will always hit their head.
+        ['Force Hit'] = false, -- While a person is selected it will always hit their head.
         ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
-        ['Target Mode'] = 'Select' -- Automatic // Select
+        ['Target Mode'] = 'Automatic' -- Automatic // Select
     },
     ["Checks"] = { -- Checks before targeting, don't touch unless you know what you're doing.
         ['Visible Check'] = true,
