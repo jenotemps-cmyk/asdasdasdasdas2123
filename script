@@ -38,9 +38,9 @@ shared.Glory = {
             ['mode'] = '2D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
-                ['x'] = 10,
-                ['y'] = 10,
-                ['z'] = 10,
+                ['x'] = 1000,
+                ['y'] = 1000,
+                ['z'] = 1000,
             },
         },
         ['distance check'] = {
@@ -82,7 +82,7 @@ shared.Glory = {
     },
 
     ['trigger bot'] = {
-        ['enabled'] = true,
+        ['enabled'] = false,
         ['mode'] = 'Hold',
         ['delay'] = 0.01,
         ['require target'] = true,
@@ -121,9 +121,9 @@ shared.Glory = {
 
     ['spread modifications'] = {
         ['enabled'] = true,
-        ['amount'] = 20, -- 1-100
+        ['amount'] = 2, -- 1-100
         ['specific weapons'] = {
-            ['enabled'] = true,
+            ['enabled'] = false,
             ['weapons'] = {
                 '[Double-Barrel SG]',
                 
@@ -154,7 +154,7 @@ shared.Glory = {
 
     ['spiderman'] = {
         ['enabled'] = true,
-        ['jumppower'] = 20,
+        ['jumppower'] = 40,
         ['knifejumppower'] = 25,
     },
 
