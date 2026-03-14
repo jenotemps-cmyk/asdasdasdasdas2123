@@ -11,7 +11,7 @@ getgenv().wizprivate = {
     },
     ['Select Only Features'] = {
         ['Force Hit'] = true, -- While a person is selected it will always hit their head.
-        ['Force Trigger'] = true -- While a person is selected it will trigger everywhere (Best used with Force Hit)
+        ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
         ['Target Mode'] = 'Select' -- Automatic // Select
@@ -25,7 +25,7 @@ getgenv().wizprivate = {
     },
     ['Silent Aimbot'] = {
         ['Enabled'] = true, -- Silent Aimbot toggle
-        ['HitPart'] = "Closest Part", 
+        ['HitPart'] = "Closest Point", 
         ['Closest Point'] = {
             ['Mode'] = 'Basic', -- Basic // Advanced
             ['Scale'] = 5.5, -- determines how spread out ur points are 0 = super spaced out, 1 = super centered onto the torso
