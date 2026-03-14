@@ -138,7 +138,7 @@ getgenv().wizprivate = {
         }
     },
     ['Trigger Bot'] = {
-        ['Enabled'] = true, -- Trigger Bot toggle
+        ['Enabled'] = false, -- Trigger Bot toggle
         ['Settings'] = {
             ['Mode'] = "Always", -- Always // Hold // Toggle // USE ALWAYS IF UR SELECT MODE AND RAGING
             ['Type'] = "FOV" -- FOV // Hitbox
@@ -237,11 +237,11 @@ getgenv().wizprivate = {
     ['Speed Modifications'] = { -- Modifies your speed, works universally.
         ['Enabled'] = true, -- determines if speed should work ( toggle wont work if its on false either )
         ['Normal'] = { -- normal player conditions
-            ['Multiplier'] = 2
+            ['Multiplier'] = 10
         },
         ['Low Health'] = { -- checks if player is under 35 health and if so it just makes it ur speed choice
             ['Health Threshold'] = 35,
-            ['Multiplier'] = 2
+            ['Multiplier'] = 12
         }
     }
 }
