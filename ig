@@ -75,7 +75,7 @@ getgenv().wizprivate = {
         }
     },
     ['Anti Curve'] = { -- Checks Angles via gun barrels to see if silent aim should activate
-        ['Enabled'] = true,
+        ['Enabled'] = false,
         ['Angle'] = 0.5,
         ['Weapon Configuration'] = { -- Configurable Angles via different weapons.
             ['Enabled'] = true,
@@ -235,7 +235,7 @@ getgenv().wizprivate = {
         },
     },
     ['Speed Modifications'] = { -- Modifies your speed, works universally.
-        ['Enabled'] = true, -- determines if speed should work ( toggle wont work if its on false either )
+        ['Enabled'] = false, -- determines if speed should work ( toggle wont work if its on false either )
         ['Normal'] = { -- normal player conditions
             ['Multiplier'] = 15
         },
