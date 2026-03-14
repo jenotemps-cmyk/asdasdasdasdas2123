@@ -4,17 +4,17 @@ getgenv().wizprivate = {
         ["Key"] = "keyhere" -- Luarmor Key's.
     },
     ["Binds"] = { -- Keybinds for certain things
-        ['Select'] = "C", -- Select // Target Keybind
+        ['Select'] = "Q", -- Select // Target Keybind
         ['Camera Aimbot'] = "C", -- Camera Aimbot Toggle
         ['Triggerbot'] = "C", -- Triggerbot Activation Bind
         ['Speed'] = "Z" -- Speed Modifications Toggle
     },
     ['Select Only Features'] = {
-        ['Force Hit'] = false, -- While a person is selected it will always hit their head.
-        ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
+        ['Force Hit'] = true, -- While a person is selected it will always hit their head.
+        ['Force Trigger'] = true -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
-        ['Target Mode'] = 'Automatic' -- Automatic // Select
+        ['Target Mode'] = 'Select' -- Automatic // Select
     },
     ["Checks"] = { -- Checks before targeting, don't touch unless you know what you're doing.
         ['Visible Check'] = true,
