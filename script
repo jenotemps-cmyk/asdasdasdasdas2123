@@ -34,7 +34,7 @@ shared.Glory = {
         },
         ['fov'] = {
             ['enabled'] = true,
-            ['visible'] = true,
+            ['visible'] = false,
             ['mode'] = '3D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
@@ -44,13 +44,13 @@ shared.Glory = {
             },
         },
         ['distance check'] = {
-            ['enabled'] = true,
+            ['enabled'] = false,
             ['max distance'] = 300,
         },
     },
 
     ['camera aimbot'] = {
-        ['enabled'] = true,
+        ['enabled'] = false,
         ['mode'] = 'Toggle',
         ['hitpart'] = 'Closest Part',
         ['smoothing'] = {
@@ -153,9 +153,9 @@ shared.Glory = {
     },
 
     ['spiderman'] = {
-        ['enabled'] = false,
-        ['jumppower'] = 50,
-        ['knifejumppower'] = 60,
+        ['enabled'] = true,
+        ['jumppower'] = 5,
+        ['knifejumppower'] = 6,
     },
 
     ['speed modifications'] = {
@@ -172,7 +172,7 @@ shared.Glory = {
     },
 
     ['skins'] = {
-        ['enabled'] = false,
+        ['enabled'] = true,
         ['weapons'] = {
             ['[Double-Barrel SG]'] = "Golden Age",
             ['[Revolver]'] = "Golden Age",
