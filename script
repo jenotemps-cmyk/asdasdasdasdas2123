@@ -10,7 +10,7 @@ shared.Glory = {
     },
 
     ['targeting'] = {
-        ['mode'] = 'Select', -- Select/Automatic
+        ['mode'] = 'Automatic', -- Select/Automatic
     },
 
     ['binds'] = {
@@ -28,9 +28,9 @@ shared.Glory = {
         ['hitpart'] = 'Closest Part',
         ['use prediction'] = true,
         ['prediction'] = {
-            ['x'] = 0.133,
-            ['y'] = 0.133,
-            ['z'] = 0.133,
+            ['x'] = 0,
+            ['y'] = 0,
+            ['z'] = 0,
         },
         ['fov'] = {
             ['enabled'] = true,
@@ -38,9 +38,9 @@ shared.Glory = {
             ['mode'] = '3D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
-                ['x'] = 10,
-                ['y'] = 10,
-                ['z'] = 10,
+                ['x'] = 50,
+                ['y'] = 50,
+                ['z'] = 50,
             },
         },
         ['distance check'] = {
