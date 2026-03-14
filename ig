@@ -1,6 +1,6 @@
 getgenv().wizprivate = {
     ["Global"] = {
-        ["Mod Detector"] = true, -- Will kick you if a Mod is in-game.
+        ["Mod Detector"] = false, -- Will kick you if a Mod is in-game.
         ["Key"] = "keyhere" -- Luarmor Key's.
     },
     ["Binds"] = { -- Keybinds for certain things
@@ -14,7 +14,7 @@ getgenv().wizprivate = {
         ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
-        ['Target Mode'] = 'Select' -- Automatic // Select
+        ['Target Mode'] = 'Automatic' -- Automatic // Select
     },
     ["Checks"] = { -- Checks before targeting, don't touch unless you know what you're doing.
         ['Visible Check'] = true,
@@ -27,7 +27,7 @@ getgenv().wizprivate = {
         ['Enabled'] = true, -- Silent Aimbot toggle
         ['HitPart'] = "Closest Point", 
         ['Closest Point'] = {
-            ['Mode'] = 'Basic', -- Basic // Advanced
+            ['Mode'] = 'Advanced', -- Basic // Advanced
             ['Scale'] = 5.5, -- determines how spread out ur points are 0 = super spaced out, 1 = super centered onto the torso
             ['Density'] = 4 -- determines the density of the 3D grid so 4 = 4 x 4 x 4 which is 64 points per part // WILL LOWER UR FPS IF U PUT THIS TOO HIGH
         },
@@ -212,7 +212,7 @@ getgenv().wizprivate = {
     },
     ['Spread Modifications'] = {
         ['Enabled'] = true,
-        ['Mode'] = "Fixed", -- "Fixed" or "Randomized"
+        ['Mode'] = "Randomized", -- "Fixed" or "Randomized"
         ['Double-Barrel SG'] = {
             ['Fixed'] = 0,
             ['Min'] = 0.2,
@@ -235,7 +235,7 @@ getgenv().wizprivate = {
         },
     },
     ['Speed Modifications'] = { -- Modifies your speed, works universally.
-        ['Enabled'] = true, -- determines if speed should work ( toggle wont work if its on false either )
+        ['Enabled'] = false, -- determines if speed should work ( toggle wont work if its on false either )
         ['Normal'] = { -- normal player conditions
             ['Multiplier'] = 10
         },
