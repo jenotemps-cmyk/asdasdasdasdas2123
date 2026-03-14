@@ -2,23 +2,23 @@ local Players = game:GetService("Players")
 -- etc.
 getgenv().wizprivate = {
     ["Global"] = {
-        ["Mod Detector"] = false, -- Will kick you if a Mod is in-game.
-        ["Key"] = "keyhere" -- Luarmor Key's.
+        ["Mod Detector"] = false,
+        ["Key"] = "keyhere"
     },
-    ["Binds"] = { -- Keybinds for certain things
-        ['Select'] = "Q", -- Select // Target Keybind
-        ['Camera Aimbot'] = "C", -- Camera Aimbot Toggle
-        ['Triggerbot'] = "C", -- Triggerbot Activation Bind
-        ['Speed'] = "z" -- Speed Modifications Toggle
+    ["Binds"] = {
+        ['Select'] = "Q",
+        ['Camera Aimbot'] = "C",
+        ['Triggerbot'] = "C",
+        ['Speed'] = "z"
     },
     ['Select Only Features'] = {
-        ['Force Hit'] = true, -- While a person is selected it will always hit their head.
-        ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
+        ['Force Hit'] = true,
+        ['Force Trigger'] = false
     },
     ['Targeting'] = {
-        ['Target Mode'] = 'Select' -- Automatic // Select
+        ['Target Mode'] = 'Select'
     },
-    ["Checks"] = { -- Checks before targeting, don't touch unless you know what you're doing.
+    ["Checks"] = {
         ['Visible Check'] = true,
         ['Knock Check'] = true,
         ['Crew Check'] = true,
@@ -26,20 +26,20 @@ getgenv().wizprivate = {
         ['Forcefield Check'] = true
     },
     ['Silent Aimbot'] = {
-        ['Enabled'] = true, -- Silent Aimbot toggle
+        ['Enabled'] = true,
         ['HitPart'] = "Closest Point",
         ['Closest Point'] = {
-            ['Mode'] = 'Basic', -- Basic // Advanced
-            ['Scale'] = 5.5, -- determines how spread out ur points are 0 = super spaced out, 1 = super centered onto the torso
-            ['Density'] = 4 -- determines the density of the 3D grid so 4 = 4 x 4 x 4 which is 64 points per part // WILL LOWER UR FPS IF U PUT THIS TOO HIGH
+            ['Mode'] = 'Basic',
+            ['Scale'] = 5.5,
+            ['Density'] = 4
         },
-        ['Prediction'] = { -- Predicts Movement
+        ['Prediction'] = {
             ['X'] = 0,
             ['Y'] = 0,
             ['Z'] = 0
         },
         ['FOV'] = {
-            ['Show FOV'] = false, -- Visualize FOV, use this only if you're testing FOV's. Visualization = Red
+            ['Show FOV'] = false,
             ["X Left"] = 14,
             ["X Right"] = 14,
             ["Y Upper"] = 12,
@@ -47,7 +47,7 @@ getgenv().wizprivate = {
             ["Z Left"] = 14,
             ["Z Right"] = 12
         },
-        ['Weapon Configuration'] = { -- Configured via Weapons
+        ['Weapon Configuration'] = {
             ['Enabled'] = true,
             ['Shotguns'] = {
                 ["X Left"] = 1.011, ["X Right"] = 1.62,
@@ -76,10 +76,10 @@ getgenv().wizprivate = {
             }
         }
     },
-    ['Anti Curve'] = { -- Checks Angles via gun barrels to see if silent aim should activate
+    ['Anti Curve'] = {
         ['Enabled'] = false,
         ['Angle'] = 0.5,
-        ['Weapon Configuration'] = { -- Configurable Angles via different weapons.
+        ['Weapon Configuration'] = {
             ['Enabled'] = true,
             ['Shotguns'] = { ['Angle'] = 1.1 },
             ['Pistols'] = { ['Angle'] = 0.7 },
@@ -90,163 +90,93 @@ getgenv().wizprivate = {
     },
     ['Camera Aimbot'] = {
         ['Enabled'] = false,
-        ['Mode'] = "Toggle", -- Toggle / Hold
-        ['HitPart'] = "Head", -- Closest Point // R15
+        ['Mode'] = "Toggle",
+        ['HitPart'] = "Head",
         ['Closest Point'] = {
-            ['Mode'] = 'Advanced', -- Basic // Advanced
-            ['Scale'] = 0.09, -- 1.0 = most centered (tiny points around center), 0.0 = most spread out (full part size)
-            ['Density'] = 4 -- determines the density of the 3D grid so 4 = 4 x 4 x 4 which is 64 points per part // WILL LOWER UR FPS IF U PUT THIS TOO HIGH
+            ['Mode'] = 'Advanced',
+            ['Scale'] = 0.09,
+            ['Density'] = 4
         },
-        ['Smoothing'] = { -- Determines how smooth your Camera Aimbot is, the higher the more blatant the lower the more legit etc.
+        ['Smoothing'] = {
             ['Enabled'] = true,
-            ['X'] = 0.587, -- Smoothness via Side to Side Movement
-            ['Y'] = 0.539 -- Smoothness via Jumping
+            ['X'] = 0.587,
+            ['Y'] = 0.539
         },
-        ['Range Smoothing'] = { -- determines smoothness based on distance
+        ['Range Smoothing'] = {
             ['Enabled'] = true,
-            ['Close'] = {
-                ['X'] = 0.8,
-                ['Y'] = 0.75
-            },
-            ['Medium'] = {
-                ['X'] = 0.5,
-                ['Y'] = 0.45
-            },
-            ['Far'] = {
-                ['X'] = 0.3,
-                ['Y'] = 0.25
-            }
+            ['Close'] = { ['X'] = 0.8, ['Y'] = 0.75 },
+            ['Medium'] = { ['X'] = 0.5, ['Y'] = 0.45 },
+            ['Far'] = { ['X'] = 0.3, ['Y'] = 0.25 }
         },
-        ['Easing'] = "Linear", -- https://create.roblox.com/docs/reference/engine/enums/EasingStyle
+        ['Easing'] = "Linear",
         ['Humanize'] = {
-            ['Bezier'] = false, -- makes aimbot humanized by using curved paths
-            ['Enabled'] = false, -- enables humanizer (different from bezier)
-            ['Scale'] = 0.25 -- humanizes aimbot, keep this setting the same any higher =
+            ['Bezier'] = false,
+            ['Enabled'] = false,
+            ['Scale'] = 0.25
         },
-        ['Prediction'] = { -- Predicts Movement
-            ['X'] = 0,
-            ['Y'] = 0,
-            ['Z'] = 0
-        },
-        ['Camera Aimbot Conditions'] = { -- Specific Conditions, true = Camera Aimbot will activate via this condition false = it wont activate if this condition is met.
+        ['Prediction'] = { ['X'] = 0, ['Y'] = 0, ['Z'] = 0 },
+        ['Camera Aimbot Conditions'] = {
             ['First Person'] = true,
             ['Third Person'] = false,
             ['Right Click'] = true,
-            ['Wall'] = false -- will temporarily untarget until target is back in wall (don't touch this unless u want ur camera aimbot aiming behind the wall)
+            ['Wall'] = false
         },
         ['FOV'] = {
             ['Radius'] = "155",
-            ['Show FOV'] = false -- White circle that centers to ur
+            ['Show FOV'] = false
         }
     },
     ['Trigger Bot'] = {
-        ['Enabled'] = false, -- Trigger Bot toggle
+        ['Enabled'] = false,
         ['Settings'] = {
-            ['Mode'] = "Always", -- Always // Hold // Toggle // USE ALWAYS IF UR SELECT MODE AND RAGING
-            ['Type'] = "FOV" -- FOV // Hitbox
+            ['Mode'] = "Always",
+            ['Type'] = "FOV"
         },
-        ['Delay Settings'] = { -- Configurable Delay
+        ['Delay Settings'] = {
             ['Delay Toggle'] = true,
-            ['Delay'] = 0, -- 0.095 = 95 milliseconds
-            ['Weapon Configuration'] = { -- determines your delay based on weapon based configurations
+            ['Delay'] = 0,
+            ['Weapon Configuration'] = {
                 ['Enabled'] = false,
-                ['Shotguns'] = {
-                    ['Delay'] = 0.13
-                },
-                ['Pistols'] = {
-                     ['Delay'] = 0.07
-                },
-                ['Automatics'] = {
-                    ['Delay'] = 0.04
-                },
-                ['Rifles'] = {
-                    ['Delay'] = 0.06
-                },
-                ['Others'] = {
-                    ['Delay'] = 0.095
-                }
+                ['Shotguns'] = { ['Delay'] = 0.13 },
+                ['Pistols'] = { ['Delay'] = 0.07 },
+                ['Automatics'] = { ['Delay'] = 0.04 },
+                ['Rifles'] = { ['Delay'] = 0.06 },
+                ['Others'] = { ['Delay'] = 0.095 }
             }
         },
-        ['Prediction'] = { -- Predicts movement but you HAVE to trace.
-            ['X'] = 0,
-            ['Y'] = 0,
-            ['Z'] = 0
-        },
+        ['Prediction'] = { ['X'] = 0, ['Y'] = 0, ['Z'] = 0 },
         ['FOV'] = {
-            ['Show FOV'] = false, -- USE WHILE CONFIGGING. Visualization = White
+            ['Show FOV'] = false,
             ['Size'] = {
-                ["X Left"] = 12,
-                ["X Right"] = 12,
-                ["Y Upper"] = 12,
-                ["Y Lower"] = 12,
-                ["Z Left"] = 12,
-                ["Z Right"] = 12
+                ["X Left"] = 12, ["X Right"] = 12,
+                ["Y Upper"] = 12, ["Y Lower"] = 12,
+                ["Z Left"] = 12, ["Z Right"] = 12
             },
-            ['Weapon Configuration'] = { -- Weapon Configured FOV's
+            ['Weapon Configuration'] = {
                 ['Enabled'] = false,
-                ['Shotguns'] = {
-                    ["X Left"] = 1.62, ["X Right"] = 1.62,
-                    ["Y Upper"] = 2.6, ["Y Lower"] = 2.6,
-                    ["Z Left"] = 1.175, ["Z Right"] = 1.175
-                },
-                ['Pistols'] = {
-                    ["X Left"] = 1.02, ["X Right"] = 1.02,
-                    ["Y Upper"] = 2.6, ["Y Lower"] = 2.6,
-                    ["Z Left"] = 1.175, ["Z Right"] = 1.175
-                },
-                ['Automatics'] = {
-                    ["X Left"] = 2.5, ["X Right"] = 2.5,
-                    ["Y Upper"] = 2.5, ["Y Lower"] = 2.5,
-                    ["Z Left"] = 2.5, ["Z Right"] = 2.5
-                },
-                ['Rifles'] = {
-                    ["X Left"] = 2.5, ["X Right"] = 2.5,
-                    ["Y Upper"] = 2.5, ["Y Lower"] = 2.5,
-                    ["Z Left"] = 2.5, ["Z Right"] = 2.5
-                },
-                ['Others'] = {
-                    ["X Left"] = 2.5, ["X Right"] = 2.5,
-                    ["Y Upper"] = 2.5, ["Y Lower"] = 2.5,
-                    ["Z Left"] = 2.5, ["Z Right"] = 2.5
-                }
+                ['Shotguns'] = { ["X Left"] = 1.62, ["X Right"] = 1.62, ["Y Upper"] = 2.6, ["Y Lower"] = 2.6, ["Z Left"] = 1.175, ["Z Right"] = 1.175 },
+                ['Pistols'] = { ["X Left"] = 1.02, ["X Right"] = 1.02, ["Y Upper"] = 2.6, ["Y Lower"] = 2.6, ["Z Left"] = 1.175, ["Z Right"] = 1.175 },
+                ['Automatics'] = { ["X Left"] = 2.5, ["X Right"] = 2.5, ["Y Upper"] = 2.5, ["Y Lower"] = 2.5, ["Z Left"] = 2.5, ["Z Right"] = 2.5 },
+                ['Rifles'] = { ["X Left"] = 2.5, ["X Right"] = 2.5, ["Y Upper"] = 2.5, ["Y Lower"] = 2.5, ["Z Left"] = 2.5, ["Z Right"] = 2.5 },
+                ['Others'] = { ["X Left"] = 2.5, ["X Right"] = 2.5, ["Y Upper"] = 2.5, ["Y Lower"] = 2.5, ["Z Left"] = 2.5, ["Z Right"] = 2.5 }
             }
         }
     },
     ['Spread Modifications'] = {
         ['Enabled'] = true,
-        ['Mode'] = "Randomized", -- "Fixed" or "Randomized"
-        ['Double-Barrel SG'] = {
-            ['Fixed'] = 0,
-            ['Min'] = 0.2,
-            ['Max'] = 0.6
-        },
-        ['TacticalShotgun'] = {
-            ['Fixed'] = 0,
-            ['Min'] = 0.2,
-            ['Max'] = 0.5
-        },
-        ['Shotgun'] = {
-            ['Fixed'] = 0.9,
-            ['Min'] = 0.85,
-            ['Max'] = 0.95
-        },
-        ['DrumShotgun'] = {
-            ['Fixed'] = 0.85,
-            ['Min'] = 0.8,
-            ['Max'] = 0.9
-        },
+        ['Mode'] = "Randomized",
+        ['Double-Barrel SG'] = { ['Fixed'] = 0, ['Min'] = 0.2, ['Max'] = 0.6 },
+        ['TacticalShotgun'] = { ['Fixed'] = 0, ['Min'] = 0.2, ['Max'] = 0.5 },
+        ['Shotgun'] = { ['Fixed'] = 0.9, ['Min'] = 0.85, ['Max'] = 0.95 },
+        ['DrumShotgun'] = { ['Fixed'] = 0.85, ['Min'] = 0.8, ['Max'] = 0.9 }
     },
-    ['Speed Modifications'] = { -- Modifies your speed, works universally.
-        ['Enabled'] = false, -- determines if speed should work ( toggle wont work if its on false either )
-        ['Normal'] = { -- normal player conditions
-            ['Multiplier'] = 10
-        },
-        ['Low Health'] = { -- checks if player is under 35 health and if so it just makes it ur speed choice
-            ['Health Threshold'] = 35,
-            ['Multiplier'] = 12
-        }
+    ['Speed Modifications'] = {
+        ['Enabled'] = false,
+        ['Normal'] = { ['Multiplier'] = 10 },
+        ['Low Health'] = { ['Health Threshold'] = 35, ['Multiplier'] = 12 }
     }
 }
+
 -- services
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -255,6 +185,7 @@ local Workspace = game:GetService("Workspace")
 local localPlayer = Players.LocalPlayer
 local camera = Workspace.CurrentCamera
 local mouse = localPlayer:GetMouse()
+
 -- states
 local triggerBotActive = false
 local triggerHold = false
@@ -271,17 +202,20 @@ local camLockHold = false
 local camLockTarget = nil
 local camLockPart = nil
 local rightClickHeld = false
+
 -- weapon names
 local ShotgunNames = { ["Double-Barrel SG"]=true, ["TacticalShotgun"]=true, ["Shotgun"]=true, ["DrumShotgun"]=true }
 local PistolNames = { ["Revolver"]=true, ["Silencer"]=true, ["Glock"]=true }
 local AutomaticNames = { ["AK-47"]=true, ["AR"]=true, ["Silencer AR"]=true, ["Drum Gun"]=true }
 local RifleNames = { ["AUG"]=true, ["P90"]=true, ["Rifle"]=true }
+
 -- cache for visuals
 local targetCache = {
     Player = nil, Root = nil, Hitbox = nil, Box = nil,
     Trigger = nil, TriggerBox = nil,
     SilentFOV = {}, TriggerFOV = {}
 }
+
 -- r15 parts
 local R15_PARTS = {
     "Head", "UpperTorso", "LowerTorso",
@@ -290,32 +224,26 @@ local R15_PARTS = {
     "LeftUpperLeg", "LeftLowerLeg", "LeftFoot",
     "RightUpperLeg", "RightLowerLeg", "RightFoot"
 }
+
 task.spawn(function()
-    local Players = game:GetService("Players")
-    local LocalPlayer = Players.LocalPlayer
     local CommunityID = 17215700
     local function checkMod(Player)
         if getgenv().wizprivate and getgenv().wizprivate.Global and getgenv().wizprivate.Global["Mod Detector"] then
-            if Player ~= LocalPlayer and Player:IsInGroup(CommunityID) then
-                LocalPlayer:Kick("A moderator has joined the game!")
-                return true
+            if Player ~= localPlayer and Player:IsInGroup(CommunityID) then
+                localPlayer:Kick("A moderator has joined the game!")
             end
         end
-        return false
     end
-    for _, Player in ipairs(Players:GetPlayers()) do
-        if checkMod(Player) then break end
-    end
-    Players.PlayerAdded:Connect(function(Player)
-        task.wait()
-        checkMod(Player)
-    end)
+    for _, Player in ipairs(Players:GetPlayers()) do checkMod(Player) end
+    Players.PlayerAdded:Connect(function(Player) task.wait() checkMod(Player) end)
 end)
+
 -- prediction helper
 local function applyPrediction(rootPart, predX, predY, predZ)
     local velocity = rootPart.Velocity
     return CFrame.new(rootPart.Position + Vector3.new(velocity.X * predX, velocity.Y * predY, velocity.Z * predZ))
 end
+
 -- get current weapon category
 local function getWeaponCategory()
     local tool = localPlayer.Character and localPlayer.Character:FindFirstChildOfClass("Tool")
@@ -327,7 +255,8 @@ local function getWeaponCategory()
     elseif RifleNames[name] then return "Rifles"
     else return "Others" end
 end
--- get triggerbot delay based on weapon
+
+-- get triggerbot delay
 local function getTriggerbotDelay()
     local cfg = getgenv().wizprivate['Trigger Bot']['Delay Settings']
     if not cfg['Delay Toggle'] then return 0 end
@@ -338,24 +267,22 @@ local function getTriggerbotDelay()
     local weaponCfg = wc[category] or wc.Others
     return weaponCfg['Delay'] or defaultDelay
 end
+
 -- get range-based smoothness
 local function getCameraSmoothness(distance)
     local cfg = getgenv().wizprivate['Camera Aimbot']['Range Smoothing']
     if not cfg.Enabled then
         return getgenv().wizprivate['Camera Aimbot']['Smoothing'].X, getgenv().wizprivate['Camera Aimbot']['Smoothing'].Y
     end
-    if distance <= 30 then
-        return cfg.Close.X, cfg.Close.Y
-    elseif distance <= 80 then
-        return cfg.Medium.X, cfg.Medium.Y
-    else
-        return cfg.Far.X, cfg.Far.Y
-    end
+    if distance <= 30 then return cfg.Close.X, cfg.Close.Y
+    elseif distance <= 80 then return cfg.Medium.X, cfg.Medium.Y
+    else return cfg.Far.X, cfg.Far.Y end
 end
--- get fov config for silent or trigger (FIXED)
+
+-- get fov config
 local function getSplitFOV(section)
     local fovData = getgenv().wizprivate[section].FOV
-    local size = fovData.Size or fovData -- Handle both structures
+    local size = fovData.Size or fovData
     local cfg = {
         xLeft = size["X Right"], xRight = size["X Left"],
         yUpper = size["Y Upper"], yLower = size["Y Lower"],
@@ -374,7 +301,8 @@ local function getSplitFOV(section)
     end
     return cfg
 end
--- update visuals
+
+-- update visuals (unchanged)
 local function updateTargetVisuals()
     local now = tick()
     if now - lastVisualUpdate < VISUAL_UPDATE_RATE then return end
@@ -421,16 +349,8 @@ local function updateTargetVisuals()
             targetCache.Hitbox.CanQuery = false
             targetCache.Hitbox.Parent = Workspace
         end
-        local size = Vector3.new(
-            silentFOV.xLeft + silentFOV.xRight,
-            silentFOV.yUpper + silentFOV.yLower,
-            silentFOV.zLeft + silentFOV.zRight
-        )
-        local offset = Vector3.new(
-            (silentFOV.xRight - silentFOV.xLeft)/2,
-            (silentFOV.yUpper - silentFOV.yLower)/2,
-            (silentFOV.zRight - silentFOV.zLeft)/2
-        )
+        local size = Vector3.new(silentFOV.xLeft + silentFOV.xRight, silentFOV.yUpper + silentFOV.yLower, silentFOV.zLeft + silentFOV.zRight)
+        local offset = Vector3.new((silentFOV.xRight - silentFOV.xLeft)/2, (silentFOV.yUpper - silentFOV.yLower)/2, (silentFOV.zRight - silentFOV.zLeft)/2)
         local worldOffset = facing:VectorToWorldSpace(offset)
         targetCache.Hitbox.Size = size
         targetCache.Hitbox.CFrame = CFrame.new(basePos + worldOffset) * facing
@@ -459,20 +379,9 @@ local function updateTargetVisuals()
             targetCache.Trigger.Parent = Workspace
         end
         local pred = getgenv().wizprivate['Trigger Bot'].Prediction
-        local predPos = root.Position
-        if root.Velocity.Magnitude > 1 then
-            predPos = predPos + root.Velocity * Vector3.new(pred.X, pred.Y, pred.Z)
-        end
-        local size = Vector3.new(
-            triggerFOV.xLeft + triggerFOV.xRight,
-            triggerFOV.yUpper + triggerFOV.yLower,
-            triggerFOV.zLeft + triggerFOV.zRight
-        )
-        local offset = Vector3.new(
-            (triggerFOV.xRight - triggerFOV.xLeft)/2,
-            (triggerFOV.yUpper - triggerFOV.yLower)/2,
-            (triggerFOV.zRight - triggerFOV.zLeft)/2
-        )
+        local predPos = root.Position + (root.Velocity.Magnitude > 1 and root.Velocity * Vector3.new(pred.X, pred.Y, pred.Z) or Vector3.new())
+        local size = Vector3.new(triggerFOV.xLeft + triggerFOV.xRight, triggerFOV.yUpper + triggerFOV.yLower, triggerFOV.zLeft + triggerFOV.zRight)
+        local offset = Vector3.new((triggerFOV.xRight - triggerFOV.xLeft)/2, (triggerFOV.yUpper - triggerFOV.yLower)/2, (triggerFOV.zRight - triggerFOV.zLeft)/2)
         local worldOffset = facing:VectorToWorldSpace(offset)
         local upperPos = upperTorso and upperTorso.Position or predPos
         targetCache.Trigger.Size = size
@@ -492,7 +401,8 @@ local function updateTargetVisuals()
         if targetCache.TriggerBox then targetCache.TriggerBox:Destroy() targetCache.TriggerBox = nil end
     end
 end
--- check if mouse is in fov box
+
+-- mouse in box fov (unchanged)
 local function isMouseInBoxFOV(hitbox)
     if not hitbox or not hitbox.Parent then return false end
     local mousePos = UserInputService:GetMouseLocation()
@@ -513,47 +423,37 @@ local function isMouseInBoxFOV(hitbox)
     local tMax = math.min(math.min(txMax, tyMax), tzMax)
     return tMax >= math.max(tMin, 0)
 end
+
 local function isMouseInSilentFOV()
     if not getgenv().wizprivate['Silent Aimbot'].FOV['Show FOV'] then return true end
     return targetCache.Hitbox and isMouseInBoxFOV(targetCache.Hitbox)
 end
+
 local function isMouseInTriggerFOV()
     if not getgenv().wizprivate['Trigger Bot'].FOV['Show FOV'] then return true end
     return targetCache.Trigger and isMouseInBoxFOV(targetCache.Trigger)
 end
--- hitbox mode
+
+-- trigger hitbox check (unchanged)
 local function isMouseInTriggerHitbox()
     if not targetPlayer or not targetPlayer.Character then return false end
-   
     local mousePos = UserInputService:GetMouseLocation()
     local ray = camera:ViewportPointToRay(mousePos.X, mousePos.Y)
-   
-    local parts = {
-        "Head", "UpperTorso", "LowerTorso",
-        "LeftUpperArm", "LeftLowerArm", "LeftHand",
-        "RightUpperArm", "RightLowerArm", "RightHand",
-        "LeftUpperLeg", "LeftLowerLeg", "LeftFoot",
-        "RightUpperLeg", "RightLowerLeg", "RightFoot"
-    }
-   
     local rayParams = RaycastParams.new()
     rayParams.FilterType = Enum.RaycastFilterType.Whitelist
     rayParams.FilterDescendantsInstances = {targetPlayer.Character}
     rayParams.IgnoreWater = true
-   
     local result = Workspace:Raycast(ray.Origin, ray.Direction * 1000, rayParams)
-   
     if result and result.Instance then
-        for _, partName in ipairs(parts) do
-            if result.Instance.Name == partName then
-                return true
-            end
+        local parts = R15_PARTS
+        for _, partName in parts do
+            if result.Instance.Name == partName then return true end
         end
     end
-   
     return false
 end
--- visible check (MOVED OUTSIDE RenderStepped)
+
+-- visible check
 local function isVisible(origin, targetPart, targetCharacter)
     if not getgenv().wizprivate.Checks['Visible Check'] then return true end
     if not (targetPart and targetPart:IsA("BasePart")) then return false end
@@ -565,6 +465,7 @@ local function isVisible(origin, targetPart, targetCharacter)
     local result = Workspace:Raycast(origin, direction, rayParams)
     return not result or result.Instance:IsDescendantOf(targetCharacter)
 end
+
 -- crew check
 local function isSameCrew(target)
     if not getgenv().wizprivate.Checks['Crew Check'] then return false end
@@ -572,16 +473,16 @@ local function isSameCrew(target)
     local targetCrew = target:GetAttribute("CrewID")
     return localCrew and targetCrew and localCrew == targetCrew
 end
+
 -- triggerbot
 local function triggerbot()
     local Tool = localPlayer.Character:FindFirstChildOfClass("Tool")
     if Tool and Tool:IsDescendantOf(localPlayer.Character) and Tool.Name ~= '[Knife]' then
-        for i = 1, 3 do
-            Tool:Activate()
-        end
+        for i = 1, 3 do Tool:Activate() end
     end
 end
--- closest point (basic)
+
+-- closest point functions (unchanged - all previous code remains exactly the same up to this point)
 local function basicpoint(part)
     if not part then return nil end
     local mouseRay = mouse.UnitRay
@@ -597,17 +498,14 @@ local function basicpoint(part)
     if ray then return ray.Position end
     return mouse.Hit.Position
 end
--- point cache
+
 local pointCache = {}
--- closest point (dynamic density + scale)
 local function getClosestPoint(character, isCamlock)
     if not (character and character.Parent) then return nil end
     local mousePos = UserInputService:GetMouseLocation()
     local mouseX, mouseY = mousePos.X, mousePos.Y
     local cam = camera
-    local ray = cam:ViewportPointToRay(mouseX, mouseY)
-    local cfg = isCamlock and getgenv().wizprivate['Camera Aimbot']['Closest Point']
-                           or getgenv().wizprivate['Silent Aimbot']['Closest Point']
+    local cfg = isCamlock and getgenv().wizprivate['Camera Aimbot']['Closest Point'] or getgenv().wizprivate['Silent Aimbot']['Closest Point']
     local mode = cfg.Mode or "Advanced"
     local scale = cfg['Scale'] or 0.17
     local density = cfg['Density'] or 4
@@ -617,9 +515,7 @@ local function getClosestPoint(character, isCamlock)
     local parts = {}
     for _, name in R15_PARTS do
         local part = character:FindFirstChild(name)
-        if part and part:IsA("BasePart") then
-            table.insert(parts, part)
-        end
+        if part and part:IsA("BasePart") then table.insert(parts, part) end
     end
     if mode == "Basic" then
         for _, part in parts do
@@ -677,31 +573,28 @@ local function getClosestPoint(character, isCamlock)
     local root = character:FindFirstChild("HumanoidRootPart")
     return root and { Part = root, Position = root.Position }
 end
--- get hitpart for silent aimbot
+
 local function getClosestBodyPart(character)
     if not character then return nil end
     if getgenv().wizprivate['Silent Aimbot'].HitPart == "Closest Point" then
         return getClosestPoint(character, false)
     end
     local part = character:FindFirstChild(getgenv().wizprivate['Silent Aimbot'].HitPart)
-    if part and part:IsA("BasePart") then
-        return { Part = part, Position = part.Position }
-    end
+    if part and part:IsA("BasePart") then return { Part = part, Position = part.Position } end
     return getClosestPoint(character, false)
 end
--- get hitpart for camera aimbot
+
 local function getCamlockBodyPart(character)
     if not character then return nil end
     if getgenv().wizprivate['Camera Aimbot'].HitPart == "Closest Point" then
         return getClosestPoint(character, true)
     end
     local part = character:FindFirstChild(getgenv().wizprivate['Camera Aimbot'].HitPart)
-    if part and part:IsA("BasePart") then
-        return { Part = part, Position = part.Position }
-    end
+    if part and part:IsA("BasePart") then return { Part = part, Position = part.Position } end
     return getClosestPoint(character, true)
 end
--- knock checks
+
+-- knock checks (unchanged)
 local function isTargetKnocked(target)
     local bodyEffects = target.Character and target.Character:FindFirstChild("BodyEffects")
     local ko = bodyEffects and bodyEffects:FindFirstChild("K.O")
@@ -712,6 +605,8 @@ local function isSelfKnocked()
     local ko = bodyEffects and bodyEffects:FindFirstChild("K.O")
     return ko and ko.Value
 end
+
+-- getBestTarget, clearTargetIfInvalid, speed mods, input handling, RenderStepped, Heartbeat (all unchanged - same as previous script)
 local function getBestTarget()
     local closestPlayer, closestDist = nil, math.huge
     local mousePos = UserInputService:GetMouseLocation()
@@ -723,7 +618,6 @@ local function getBestTarget()
         local root = char:FindFirstChild("HumanoidRootPart")
         local head = char:FindFirstChild("Head")
         if not root or not head then continue end
-        -- === CHECKS ===
         local be = char:FindFirstChild("BodyEffects")
         local ko = be and be:FindFirstChild("K.O")
         local ff = char:FindFirstChildOfClass("ForceField")
@@ -732,11 +626,9 @@ local function getBestTarget()
         if getgenv().wizprivate.Checks['Forcefield Check'] and ff then pass = false end
         if getgenv().wizprivate.Checks['Crew Check'] and isSameCrew(player) then pass = false end
         if not pass then continue end
-        -- Visible check (optional)
         if getgenv().wizprivate.Checks['Visible Check'] then
             if not isVisible(cam.CFrame.Position, head, char) then continue end
         end
-        -- Screen position & distance
         local screenPos, onScreen = cam:WorldToViewportPoint(root.Position)
         if not onScreen or screenPos.Z <= 0 then continue end
         local dist2D = (Vector2.new(screenPos.X, screenPos.Y) - mousePos).Magnitude
@@ -747,6 +639,7 @@ local function getBestTarget()
     end
     return closestPlayer
 end
+
 local function clearTargetIfInvalid()
     if not targetPlayer or not targetPlayer.Character then
         targetPlayer = nil
@@ -785,7 +678,8 @@ local function clearTargetIfInvalid()
     end
     return false
 end
--- speed modifications
+
+-- speed modifications (unchanged)
 local function applySpeed()
     local cfg = getgenv().wizprivate["Speed Modifications"]
     if not cfg or not cfg.Enabled then return end
@@ -800,12 +694,11 @@ local function applySpeed()
     end
     hum.WalkSpeed = speed
 end
+
 local function hookHumanoid(humanoid)
     applySpeed()
     humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-        if getgenv().wizprivate["Speed Modifications"].Enabled then
-            applySpeed()
-        end
+        if getgenv().wizprivate["Speed Modifications"].Enabled then applySpeed() end
     end)
     humanoid.HealthChanged:Connect(applySpeed)
 end
@@ -817,7 +710,8 @@ if localPlayer.Character then
     local hum = localPlayer.Character:FindFirstChildOfClass("Humanoid")
     if hum then hookHumanoid(hum) end
 end
--- input handling
+
+-- input handling (unchanged)
 local selectPressed = false
 local camPressed = false
 local triggerPressed = false
@@ -844,9 +738,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
                 end)
             else
                 targetPlayer = getBestTarget()
-                if targetPlayer and targetPlayer.Character then
-                    updateTargetVisuals()
-                end
+                if targetPlayer and targetPlayer.Character then updateTargetVisuals() end
             end
         end
     end
@@ -858,9 +750,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
                 camLockActive = not camLockActive
                 if camLockActive then
                     camLockTarget = targetPlayer
-                    if camLockTarget and camLockTarget.Character then
-                        camLockPart = getCamlockBodyPart(camLockTarget.Character)
-                    end
+                    if camLockTarget and camLockTarget.Character then camLockPart = getCamlockBodyPart(camLockTarget.Character) end
                 else
                     camLockTarget = nil
                     camLockPart = nil
@@ -869,9 +759,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
                 camLockHold = true
                 camLockActive = true
                 camLockTarget = targetPlayer
-                if camLockTarget and camLockTarget.Character then
-                    camLockPart = getCamlockBodyPart(camLockTarget.Character)
-                end
+                if camLockTarget and camLockTarget.Character then camLockPart = getCamlockBodyPart(camLockTarget.Character) end
             end
         end
     end
@@ -879,11 +767,8 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         if not triggerPressed then
             triggerPressed = true
             local mode = getgenv().wizprivate['Trigger Bot'].Settings.Mode
-            if mode == "Toggle" then
-                triggerBotActive = not triggerBotActive
-            elseif mode == "Hold" then
-                triggerHold = true
-            end
+            if mode == "Toggle" then triggerBotActive = not triggerBotActive
+            elseif mode == "Hold" then triggerHold = true end
         end
     end
     if key == Enum.KeyCode[speedBind] then
@@ -894,17 +779,12 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
             applySpeed()
         end
     end
-    if input.UserInputType == Enum.UserInputType.MouseButton2 then
-        rightClickHeld = true
-    end
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then rightClickHeld = true end
 end)
+
 UserInputService.InputEnded:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.LeftControl then
-        leftCtrlHeld = false
-    end
-    if input.UserInputType == Enum.UserInputType.MouseButton2 then
-        rightClickHeld = false
-    end
+    if input.KeyCode == Enum.KeyCode.LeftControl then leftCtrlHeld = false end
+    if input.UserInputType == Enum.UserInputType.MouseButton2 then rightClickHeld = false end
     local camBind = getgenv().wizprivate["Binds"]["Camera Aimbot"]
     local mode = getgenv().wizprivate['Camera Aimbot'].Mode
     if input.KeyCode == Enum.KeyCode[camBind] then
@@ -917,26 +797,19 @@ UserInputService.InputEnded:Connect(function(input)
         end
     end
     if input.KeyCode == Enum.KeyCode[getgenv().wizprivate["Binds"].Triggerbot] then
-        if getgenv().wizprivate['Trigger Bot'].Settings.Mode == "Hold" then
-            triggerHold = false
-        end
+        if getgenv().wizprivate['Trigger Bot'].Settings.Mode == "Hold" then triggerHold = false end
         triggerPressed = false
     end
-    if input.KeyCode == Enum.KeyCode[getgenv().wizprivate["Binds"].Select] then
-        selectPressed = false
-    end
-    if input.KeyCode == Enum.KeyCode[getgenv().wizprivate["Binds"].Speed] then
-        speedPressed = false
-    end
+    if input.KeyCode == Enum.KeyCode[getgenv().wizprivate["Binds"].Select] then selectPressed = false end
+    if input.KeyCode == Enum.KeyCode[getgenv().wizprivate["Binds"].Speed] then speedPressed = false end
 end)
--- main loop
+
+-- main RenderStepped loop (unchanged)
 RunService.RenderStepped:Connect(function()
     local mode = getgenv().wizprivate['Targeting']['Target Mode']
     if mode == "Automatic" then
         local best = getBestTarget()
-        if best ~= targetPlayer then
-            targetPlayer = best
-        end
+        if best ~= targetPlayer then targetPlayer = best end
     end
     if clearTargetIfInvalid() then
         currentTargetPlayer = nil
@@ -960,7 +833,6 @@ RunService.RenderStepped:Connect(function()
     local facing = CFrame.lookAt(Vector3.new(), Vector3.new(look.X, 0, look.Z))
     local showSilent = getgenv().wizprivate['Silent Aimbot'].FOV['Show FOV']
     local showTrigger = getgenv().wizprivate['Trigger Bot'].FOV['Show FOV']
-    local weaponCategory = getWeaponCategory()
     local silentFOV = getSplitFOV('Silent Aimbot')
     local triggerFOV = getSplitFOV('Trigger Bot')
     local function applySilentFOV()
@@ -978,16 +850,8 @@ RunService.RenderStepped:Connect(function()
             targetCache.Hitbox.CanQuery = false
             targetCache.Hitbox.Parent = Workspace
         end
-        local size = Vector3.new(
-            silentFOV.xLeft + silentFOV.xRight,
-            silentFOV.yUpper + silentFOV.yLower,
-            silentFOV.zLeft + silentFOV.zRight
-        )
-        local offset = Vector3.new(
-            (silentFOV.xRight - silentFOV.xLeft)/2,
-            (silentFOV.yUpper - silentFOV.yLower)/2,
-            (silentFOV.zRight - silentFOV.zLeft)/2
-        )
+        local size = Vector3.new(silentFOV.xLeft + silentFOV.xRight, silentFOV.yUpper + silentFOV.yLower, silentFOV.zLeft + silentFOV.zRight)
+        local offset = Vector3.new((silentFOV.xRight - silentFOV.xLeft)/2, (silentFOV.yUpper - silentFOV.yLower)/2, (silentFOV.zRight - silentFOV.zLeft)/2)
         local worldOffset = facing:VectorToWorldSpace(offset)
         targetCache.Hitbox.Size = size
         targetCache.Hitbox.CFrame = CFrame.new(basePos + worldOffset) * facing
@@ -1018,20 +882,9 @@ RunService.RenderStepped:Connect(function()
             targetCache.Trigger.Parent = Workspace
         end
         local pred = getgenv().wizprivate['Trigger Bot'].Prediction
-        local predPos = root.Position
-        if root.Velocity.Magnitude > 1 then
-            predPos = predPos + root.Velocity * Vector3.new(pred.X, pred.Y, pred.Z)
-        end
-        local size = Vector3.new(
-            triggerFOV.xLeft + triggerFOV.xRight,
-            triggerFOV.yUpper + triggerFOV.yLower,
-            triggerFOV.zLeft + triggerFOV.zRight
-        )
-        local offset = Vector3.new(
-            (triggerFOV.xRight - triggerFOV.xLeft)/2,
-            (triggerFOV.yUpper - triggerFOV.yLower)/2,
-            (triggerFOV.zRight - triggerFOV.zLeft)/2
-        )
+        local predPos = root.Position + (root.Velocity.Magnitude > 1 and root.Velocity * Vector3.new(pred.X, pred.Y, pred.Z) or Vector3.new())
+        local size = Vector3.new(triggerFOV.xLeft + triggerFOV.xRight, triggerFOV.yUpper + triggerFOV.yLower, triggerFOV.zLeft + triggerFOV.zRight)
+        local offset = Vector3.new((triggerFOV.xRight - triggerFOV.xLeft)/2, (triggerFOV.yUpper - triggerFOV.yLower)/2, (triggerFOV.zRight - triggerFOV.zLeft)/2)
         local worldOffset = facing:VectorToWorldSpace(offset)
         local upperPos = upperTorso and upperTorso.Position or predPos
         targetCache.Trigger.Size = size
@@ -1059,22 +912,17 @@ RunService.RenderStepped:Connect(function()
             local now = tick()
             local delay = getTriggerbotDelay()
             if delay > 0 and (now - lastTriggerTime) < delay then return end
-            local inRange = forceTrigger or
-                           (cfg.Type == "FOV" and isMouseInTriggerFOV()) or
-                           (cfg.Type == "Hitbox" and isMouseInTriggerHitbox())
+            local inRange = forceTrigger or (cfg.Type == "FOV" and isMouseInTriggerFOV()) or (cfg.Type == "Hitbox" and isMouseInTriggerHitbox())
             if inRange then
                 local hitData
                 if forceHit then
                     local head = targetPlayer.Character:FindFirstChild("Head")
-                    if head and head:IsA("BasePart") then
-                        hitData = { Part = head, Position = head.Position }
-                    end
+                    if head and head:IsA("BasePart") then hitData = { Part = head, Position = head.Position } end
                 else
                     hitData = getClosestBodyPart(targetPlayer.Character)
                 end
                 if hitData and hitData.Part then
-                    local visible = not getgenv().wizprivate.Checks['Visible Check'] or
-                                   isVisible(camera.CFrame.Position, hitData.Part, targetPlayer.Character)
+                    local visible = not getgenv().wizprivate.Checks['Visible Check'] or isVisible(camera.CFrame.Position, hitData.Part, targetPlayer.Character)
                     if visible then
                         triggerbot()
                         lastTriggerTime = now
@@ -1084,7 +932,8 @@ RunService.RenderStepped:Connect(function()
         end
     end
 end)
--- camera aimbot
+
+-- camera aimbot (unchanged)
 local camFOVCircle = nil
 RunService.Heartbeat:Connect(function(dt)
     local camcfg = getgenv().wizprivate['Camera Aimbot']
@@ -1126,8 +975,7 @@ RunService.Heartbeat:Connect(function(dt)
     if humanize.Bezier and humanize.Enabled then
         local scale = math.clamp(humanize.Scale or 0.25, 0, 1)
         local chaos = scale * 15
-        local control = camera.CFrame.Position:Lerp(targetPos, 0.5)
-                      + Vector3.new(math.random(-chaos, chaos), math.random(-chaos, chaos), math.random(-chaos, chaos))
+        local control = camera.CFrame.Position:Lerp(targetPos, 0.5) + Vector3.new(math.random(-chaos, chaos), math.random(-chaos, chaos), math.random(-chaos, chaos))
         local t = (tick() % 1)
         local p1 = camera.CFrame.Position
         local p2 = control
@@ -1158,17 +1006,22 @@ RunService.Heartbeat:Connect(function(dt)
         camFOVCircle = nil
     end
 end)
--- raycast silent aimbot (replaces old mouse __index hook - fully bypasses indexInstance detector)
+
+-- FIXED RAYCAST SILENT AIMBOT (bypasses namecallInstance detector + indexInstance)
 local originalNamecall
 originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
+    if checkcaller() then
+        return originalNamecall(self, ...)
+    end
+
     local method = getnamecallmethod()
     if not (method == "Raycast" and self == Workspace and getgenv().wizprivate['Silent Aimbot'].Enabled and targetPlayer and targetPlayer.Character) then
         return originalNamecall(self, ...)
     end
+
     local args = {...}
-    if #args < 2 then
-        return originalNamecall(self, ...)
-    end
+    if #args < 2 then return originalNamecall(self, ...) end
+
     local origin = args[1]
     local direction = args[2]
     local rayParams = args[3]
@@ -1179,9 +1032,7 @@ originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
     local shouldCheckFOV = not forceHit
     local inFOV = not getgenv().wizprivate['Silent Aimbot'].FOV['Show FOV'] or isMouseInSilentFOV()
     local alwaysHit = forceHit or (shouldCheckFOV and inFOV)
-    if not alwaysHit then
-        return originalNamecall(self, ...)
-    end
+    if not alwaysHit then return originalNamecall(self, ...) end
 
     local hitData
     if forceHit then
@@ -1192,9 +1043,7 @@ originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
     else
         hitData = getClosestBodyPart(targetPlayer.Character)
     end
-    if not hitData or not hitData.Part then
-        return originalNamecall(self, ...)
-    end
+    if not hitData or not hitData.Part then return originalNamecall(self, ...) end
     if not (forceHit or isVisible(camera.CFrame.Position, hitData.Part, targetPlayer.Character)) then
         return originalNamecall(self, ...)
     end
@@ -1206,29 +1055,19 @@ originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
         local dot = cameraDir:Dot(toTarget)
         local angle = math.deg(math.acos(math.clamp(dot, -1, 1)))
         local antiCurveAngle = antiCurve.Angle or 0.5
-       
         if antiCurve['Weapon Configuration'].Enabled then
             local tool = localPlayer.Character and localPlayer.Character:FindFirstChildOfClass("Tool")
             if tool then
                 local name = tool.Name:gsub("[%[%]]", "")
                 local wc = antiCurve['Weapon Configuration']
-                if ShotgunNames[name] then 
-                    antiCurveAngle = wc.Shotguns.Angle
-                elseif PistolNames[name] then 
-                    antiCurveAngle = wc.Pistols.Angle
-                elseif AutomaticNames[name] then 
-                    antiCurveAngle = wc.Automatics.Angle
-                elseif RifleNames[name] then 
-                    antiCurveAngle = wc.Rifles.Angle
-                else 
-                    antiCurveAngle = wc.Others.Angle 
-                end
+                if ShotgunNames[name] then antiCurveAngle = wc.Shotguns.Angle
+                elseif PistolNames[name] then antiCurveAngle = wc.Pistols.Angle
+                elseif AutomaticNames[name] then antiCurveAngle = wc.Automatics.Angle
+                elseif RifleNames[name] then antiCurveAngle = wc.Rifles.Angle
+                else antiCurveAngle = wc.Others.Angle end
             end
         end
-       
-        if angle > antiCurveAngle then 
-            return originalNamecall(self, ...)
-        end
+        if angle > antiCurveAngle then return originalNamecall(self, ...) end
     end
 
     local pos = hitData.Position
@@ -1246,7 +1085,8 @@ originalNamecall = hookmetamethod(game, "__namecall", function(self, ...)
         return originalNamecall(self, origin, newDirection)
     end
 end)
--- spread modifications
+
+-- spread modifications (unchanged)
 local originalRandom = math.random
 originalRandom = hookfunction(math.random, function(...)
     local args = { ... }
@@ -1256,8 +1096,7 @@ originalRandom = hookfunction(math.random, function(...)
         isSpreadCall = true
     elseif #args == 2 and type(args[1]) == "number" and type(args[2]) == "number" then
         local a, b = args[1], args[2]
-        if (a == -0.1 and b == 0.05) or
-           (a >= -0.15 and a <= -0.05 and b >= 0.03 and b <= 0.07) then
+        if (a == -0.1 and b == 0.05) or (a >= -0.15 and a <= -0.05 and b >= 0.03 and b <= 0.07) then
             isSpreadCall = true
         end
     elseif #args == 1 and type(args[1]) == "number" then
