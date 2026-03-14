@@ -10,7 +10,7 @@ shared.Glory = {
     },
 
     ['targeting'] = {
-        ['mode'] = 'Automatic', -- Select/Automatic
+        ['mode'] = 'Select', -- Select/Automatic
     },
 
     ['binds'] = {
@@ -25,8 +25,8 @@ shared.Glory = {
     ['silent aimbot'] = {
         ['enabled'] = true,
         ['mode'] = 'Toggle',
-        ['hitpart'] = 'Closest Part',
-        ['use prediction'] = true,
+        ['hitpart'] = 'Closest Point',
+        ['use prediction'] = false,
         ['prediction'] = {
             ['x'] = 0,
             ['y'] = 0,
@@ -35,12 +35,12 @@ shared.Glory = {
         ['fov'] = {
             ['enabled'] = true,
             ['visible'] = false,
-            ['mode'] = '3D', -- 3D/2D
+            ['mode'] = '2D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
-                ['x'] = 50,
-                ['y'] = 50,
-                ['z'] = 50,
+                ['x'] = 10,
+                ['y'] = 10,
+                ['z'] = 10,
             },
         },
         ['distance check'] = {
@@ -58,7 +58,7 @@ shared.Glory = {
             ['y'] = 40,
             ['z'] = 40,
         },
-        ['use prediction'] = true,
+        ['use prediction'] = false,
         ['prediction'] = {
             ['x'] = 0.133,
             ['y'] = 0.133,
@@ -96,7 +96,7 @@ shared.Glory = {
         },
         ['fov'] = {
             ['enabled'] = true,
-            ['visible'] = true,
+            ['visible'] = false,
             ['mode'] = '3D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
@@ -121,12 +121,12 @@ shared.Glory = {
 
     ['spread modifications'] = {
         ['enabled'] = true,
-        ['amount'] = 1, -- 1-100
+        ['amount'] = 20, -- 1-100
         ['specific weapons'] = {
-            ['enabled'] = false,
+            ['enabled'] = true,
             ['weapons'] = {
                 '[Double-Barrel SG]',
-                '[TacticalShotgun]',
+                
             },
         },
     },
@@ -154,25 +154,25 @@ shared.Glory = {
 
     ['spiderman'] = {
         ['enabled'] = true,
-        ['jumppower'] = 5,
-        ['knifejumppower'] = 6,
+        ['jumppower'] = 20,
+        ['knifejumppower'] = 25,
     },
 
     ['speed modifications'] = {
         ['enabled'] = true,
-        ['multiplier'] = 35,
+        ['multiplier'] = 20,
     },
 
     ['esp'] = {
         ['enabled'] = true,
         ['color'] = Color3.fromRGB(255, 255, 255),
         ['target color'] = Color3.fromRGB(255, 0, 0),
-        ['use display name'] = false,
+        ['use display name'] = true,
         ['name above'] = false,
     },
 
     ['skins'] = {
-        ['enabled'] = true,
+        ['enabled'] = false,
         ['weapons'] = {
             ['[Double-Barrel SG]'] = "Golden Age",
             ['[Revolver]'] = "Golden Age",
