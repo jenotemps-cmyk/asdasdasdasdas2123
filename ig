@@ -1,23 +1,4 @@
-local ALLOWED_PLACE_IDS = {
-    95660100986253,     -- Place 1 (your main game)
-    0987654321,     -- Place 2 (maybe a lobby / testing place)
-    1122334455,     -- Place 3 etc.
-    -- add as many as you want
-}
 
-local currentPlaceId = game.PlaceId
-
-if not table.find(ALLOWED_PLACE_IDS, currentPlaceId) then
-    -- This is NOT one of the allowed places → stop the script immediately
-    return   -- (or script:Destroy() if you want to be extra clean)
-end
-
--- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
--- Normal script code starts here
--- Only runs in the places you listed above
-
-
--- Your cool code...
 local Players = game:GetService("Players")
 -- etc.
 getgenv().wizprivate = {
