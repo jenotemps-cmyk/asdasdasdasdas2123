@@ -10,7 +10,7 @@ shared.Glory = {
     },
 
     ['targeting'] = {
-        ['mode'] = 'Select', -- Select/Automatic
+        ['mode'] = 'Automatic', -- Select/Automatic
     },
 
     ['binds'] = {
@@ -24,7 +24,7 @@ shared.Glory = {
 
     ['silent aimbot'] = {
         ['enabled'] = true,
-        ['mode'] = 'Toggle',
+        ['mode'] = 'Always',
         ['hitpart'] = 'Closest Point',
         ['use prediction'] = false,
         ['prediction'] = {
@@ -38,9 +38,9 @@ shared.Glory = {
             ['mode'] = '2D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
-                ['x'] = 1000,
-                ['y'] = 1000,
-                ['z'] = 1000,
+                ['x'] = 12,
+                ['y'] = 12,
+                ['z'] = 13,
             },
         },
         ['distance check'] = {
@@ -112,7 +112,7 @@ shared.Glory = {
     },
 
     ['target line'] = {
-        ['enabled'] = true,
+        ['enabled'] = false,
         ['thickness'] = 2.2,
         ['transparency'] = 0.8,
         ['vulnerable'] = Color3.fromRGB(255, 85, 127),
@@ -154,7 +154,7 @@ shared.Glory = {
 
     ['spiderman'] = {
         ['enabled'] = true,
-        ['jumppower'] = 40,
+        ['jumppower'] = 70,
         ['knifejumppower'] = 25,
     },
 
@@ -164,7 +164,7 @@ shared.Glory = {
     },
 
     ['esp'] = {
-        ['enabled'] = true,
+        ['enabled'] = false,
         ['color'] = Color3.fromRGB(255, 255, 255),
         ['target color'] = Color3.fromRGB(255, 0, 0),
         ['use display name'] = true,
