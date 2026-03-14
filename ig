@@ -7,7 +7,7 @@ getgenv().wizprivate = {
         ['Select'] = "C", -- Select // Target Keybind
         ['Camera Aimbot'] = "C", -- Camera Aimbot Toggle
         ['Triggerbot'] = "C", -- Triggerbot Activation Bind
-        ['Speed'] = "X" -- Speed Modifications Toggle
+        ['Speed'] = "Z" -- Speed Modifications Toggle
     },
     ['Select Only Features'] = {
         ['Force Hit'] = true, -- While a person is selected it will always hit their head.
