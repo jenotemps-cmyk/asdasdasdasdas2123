@@ -1,3 +1,6 @@
+local LPH_NO_VIRTUALIZE = LPH_NO_VIRTUALIZE or function(f)
+    return f
+end
 shared.Glory = {
     ['settings'] = {
         ['knock check'] = true,
