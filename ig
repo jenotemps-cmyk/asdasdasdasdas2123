@@ -14,7 +14,7 @@ getgenv().wizprivate = {
         ['Force Trigger'] = false -- While a person is selected it will trigger everywhere (Best used with Force Hit)
     },
     ['Targeting'] = {
-        ['Target Mode'] = 'Automatic' -- Automatic // Select
+        ['Target Mode'] = 'Select' -- Automatic // Select
     },
     ["Checks"] = { -- Checks before targeting, don't touch unless you know what you're doing.
         ['Visible Check'] = true,
@@ -46,7 +46,7 @@ getgenv().wizprivate = {
             ["Z Right"] = 12
         },
         ['Weapon Configuration'] = { -- Configured via Weapons
-            ['Enabled'] = false,
+            ['Enabled'] = true,
             ['Shotguns'] = {
                 ["X Left"] = 1.011, ["X Right"] = 1.62,
                 ["Y Upper"] = 2.025, ["Y Lower"] = 3.225,
