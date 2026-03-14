@@ -1,6 +1,3 @@
-
-local Players = game:GetService("Players")
--- etc.
 getgenv().wizprivate = {
     ["Global"] = {
         ["Mod Detector"] = false, -- Will kick you if a Mod is in-game.
