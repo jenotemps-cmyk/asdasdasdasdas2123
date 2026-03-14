@@ -15,7 +15,7 @@ shared.Glory = {
 
     ['binds'] = {
         ['silent aim'] = 'C',
-        ['cam lock'] = 'X',
+        ['cam lock'] = 'p',
         ['triggerbot'] = 'V',
         ['super jump'] = 'B',
         ['esp'] = 'Y',
@@ -38,9 +38,9 @@ shared.Glory = {
             ['mode'] = '2D', -- 3D/2D
             ['active color'] = Color3.fromRGB(0, 17, 255),
             ['size'] = {
-                ['x'] = 12,
-                ['y'] = 12,
-                ['z'] = 13,
+                ['x'] = 17,
+                ['y'] = 17,
+                ['z'] = 137,
             },
         },
         ['distance check'] = {
