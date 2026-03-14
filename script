@@ -15,7 +15,7 @@ shared.Glory = {
 
     ['binds'] = {
         ['silent aim'] = 'C',
-        ['cam lock'] = 'p',
+        ['cam lock'] = 'P',
         ['triggerbot'] = 'V',
         ['super jump'] = 'B',
         ['esp'] = 'Y',
